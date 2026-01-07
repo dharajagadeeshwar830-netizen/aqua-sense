@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaSense – Smart Water Monitoring</title>
+    <link rel="stylesheet" href="aquasense.css">
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>AquaSense 💧</h1>
+            <p>Track • Analyze • Conserve Water Smartly</p>
+
+            <div class="hero-stats">
+                <div>
+                    <h3 id="totalUsage">0 L</h3>
+                    <span>Total Used</span>
+                </div>
+                <div>
+                    <h3 id="dailyTarget">0 L</h3>
+                    <span>Daily Target</span>
+                </div>
+                <div>
+                    <h3 id="remainingWater">0 L</h3>
+                    <span>Remaining</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="top-nav">
+        <a href="#record">Record</a>
+        <a href="#target">Target</a>
+        <a href="#records">Records</a>
+        <a href="#insights">Insights</a>
+        <a href="#tips">Tips</a>
+    </nav>
+
+    <main class="container">
+
+        <!-- Record Usage -->
+        <section id="record" class="glass-card">
+            <h2>Record Water Usage</h2>
+
+            <div class="form-grid">
+                <div>
+                    <label>Usage Category</label>
+                    <select id="usageType">
+                        <option>Drinking</option>
+                        <option>Cooking</option>
+                        <option>Bathing</option>
+                        <option>Cleaning</option>
+                        <option>Gardening</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Water Used (Litres)</label>
+                    <input type="number" id="waterAmount" placeholder="Enter amount">
+                </div>
+
+                <div>
+                    <label>Date</label>
+                    <input type="date" id="usageDate">
+                </div>
+            </div>
+
+            <button class="primary-btn" id="addUsageBtn">Add Usage</button>
+        </section>
+
+        <!-- Target Section -->
+        <section id="target" class="glass-card highlight">
+            <h2>Daily Water Target</h2>
+
+            <div class="target-box">
+                <input type="number" id="waterTarget" placeholder="Set daily target in litres">
+                <button class="primary-btn" id="saveTargetBtn">Save Target</button>
+            </div>
+
+            <p id="targetInfo">
+                Target: <b>0 L</b> | Remaining: <b>0 L</b>
+            </p>
+        </section>
+
+        <!-- Records Table -->
+        <section id="records" class="glass-card">
+            <h2>Usage Records</h2>
+
+            <div class="table-controls">
+                <label>Filter by Category:</label>
+                <select id="filterType">
+                    <option value="All">All</option>
+                    <option>Drinking</option>
+                    <option>Cooking</option>
+                    <option>Bathing</option>
+                    <option>Cleaning</option>
+                    <option>Gardening</option>
+                </select>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Litres</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="usageTableBody"></tbody>
+            </table>
+        </section>
+
+        <!-- Insights -->
+        <section id="insights" class="split-section">
+            <div class="text-side">
+                <h2>Usage Insights</h2>
+                <p>
+                    AquaSense provides real-time insights into water consumption
+                    patterns, helping users identify wastage and improve conservation
+                    habits through informed decision-making.
+                </p>
+                <ul>
+                    <li>Monitor daily usage</li>
+                    <li>Reduce unnecessary wastage</li>
+                    <li>Adopt sustainable practices</li>
+                </ul>
+            </div>
+
+            <div class="visual-side">
+                <div class="chart-box">
+                    <h3>Usage Chart</h3>
+                    <p>(Chart visualization placeholder)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips -->
+        <section id="tips" class="glass-card tips-section">
+            <h2>Water Conservation Tips</h2>
+
+            <div class="tips-grid">
+                <div class="tip-card">🚰 Turn off taps when not in use</div>
+                <div class="tip-card">🛠️ Fix leaking pipes immediately</div>
+                <div class="tip-card">🚿 Reduce shower time</div>
+                <div class="tip-card">🌱 Reuse water for gardening</div>
+                <div class="tip-card">🌧️ Harvest rainwater</div>
+                <div class="tip-card">♻️ Use water efficiently</div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div>
+            <h3>AquaSense</h3>
+            <p>Promoting Smart Water Usage & Conservation</p>
+        </div>
+        <p>© 2026 AquaSense | Front-End Web Development Project</p>
+    </footer>
+
+    <script src="aquasense.js"></script>
+
+</body>
+</html>
